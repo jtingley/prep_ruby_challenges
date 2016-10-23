@@ -1,7 +1,11 @@
-Write a method is_prime? which takes in a number and returns true if it is a prime number.
+def is_prime?(num)
+  (2...num).each do |divisor|
+    if num % divisor == 0
+      return false
+    end
+  end
+  return true
+end
 
-is_prime?(num)
-  divide by every number from 2..num-1
-  if any % = 0 then it isn't prime
-  if any % is greater than 0 then move to the next potential divisor
-  
+is_prime?(7)
+is_prime?(14)
