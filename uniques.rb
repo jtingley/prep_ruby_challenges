@@ -1,6 +1,12 @@
-Write a method uniques which takes an array of items and returns the array without any duplicates. Don’t use Ruby’s uniq method!
+def uniques(arr)
+  unique_array = []
+  arr.each do |x|
+    if unique_array.include?(x) == false
+      unique_array.push(x)
+    end
+  end
+  return unique_array
+end
 
-uniques(arr)
-  compare two items
-  if they are equal then pop one off
-  return remaining items in array.
+
+uniques([1,5,"frog", 2,1,3,"frog"])
